@@ -1,6 +1,9 @@
 @font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-Bold.ttf");}
 
 * {font-family: "VictorMono"; text-decoration: none;}
+
+h1 {margin-bottom: 0;}
+h2 {margin-bottom: -5px;}
 body {margin-left: 30px;}
 img {margin-left: -30px;}
 
@@ -15,7 +18,7 @@ main a:after {content: "]";}
 main a[target="_blank"]:before {content: "{";}
 main a[target="_blank"]:after {content: "}";}
 
-ul {list-style: none; padding: 0;}
+ul {padding-left: 18px;}
 
 main {max-width: 625px; clear:both;}
 
