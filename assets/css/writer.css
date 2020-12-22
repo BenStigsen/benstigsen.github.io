@@ -32,6 +32,7 @@ pre {width: 50%; overflow: auto; background-color: #EFEFEF; font-size:86%; paddi
   display: inline;
   width: 45%;
   height: 100%;
+  padding: 1%;
 }
 
 #preview {
