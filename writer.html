@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stigsen XYZ | Writer</title>
+  <meta charset="utf-8">
+  <!--<meta name="description" content="An island of thoughts">-->
+  <meta name="keywords" content="stigsen, stigsen xyz, home, programming, coding, blog, writer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/writer.css">
+</head>
+<body>
+  <h1><a href="./index.html">Stigsen XYZ</a> > Writer</h1>
+  <a href="https://github.com/benstigsen" target="_blank">GitHub</a>, <a href="https://twitter.com/benstigsen" target="_blank">Twitter</a>
+
+  <div id="wrapper">
+    <textarea id="writer"><h1>Title here</h1></textarea>
+
+    <div id="preview"></div>
+  </div>
+
+  <script>
+    let areaMain    = document.getElementById("writer");
+    let areaPreview = document.getElementById("preview");
+    let updateContentTimer;
+
+    function updateContent()
+    {
+      areaPreview.innerHTML = areaMain.value;
+    }
+
+    areaMain.addEventListener('keyup', () => {
+      clearTimeout(updateContentTimer);
+      if (areaMain.value)
+      {
+        updateContentTimer = setTimeout(updateContent, 300);
+      }
+    });
+
+    updateContent()
+  </script>
+</body>
+</html>

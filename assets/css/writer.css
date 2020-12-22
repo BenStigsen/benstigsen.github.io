@@ -1,0 +1,47 @@
+@font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-Bold.ttf");}
+
+* {font-family: "VictorMono"; text-decoration: none;}
+
+h1 {margin-bottom: 0;}
+h2 {margin-bottom: -5px;}
+body {margin-left: 30px;}
+img {margin-left: -30px; max-width: calc(45vw - 15px); width: 900px;}
+
+p {font-size: 14px;}
+
+/*a {color: #000000; text-decoration: none; color: #000000; background-color: #EEEEEE;}*/
+a {color: #000000; text-decoration: none;}
+#preview a:hover, a:hover {background-color: #000000; color: #FFFFFF;}
+#preview a {background-color: #DDDDDD;}
+#preview a:before {content: "[";}
+#preview a:after {content: "]";}
+#preview a[target="_blank"]:before {content: "{";}
+#preview a[target="_blank"]:after {content: "}";}
+
+ul {padding-left: 18px;}
+
+pre {width: 50%; overflow: auto; background-color: #EFEFEF; font-size:86%; padding:0px 10px 0px 10px; margin-bottom:30px;}
+
+#wrapper {
+  display: inline-flex;
+  width: 100%;
+  height: 80vh;
+}
+
+#writer {
+  display: inline;
+  width: 45%;
+  height: 100%;
+}
+
+#preview {
+  padding: 0% 0% 0% 1%;
+  word-wrap: break-word;
+  overflow: auto; 
+  max-width: 100%;
+  border: 2px solid black;
+  clear: both;
+  display: inline;
+  height: 100%;
+  width: 45%;
+}
