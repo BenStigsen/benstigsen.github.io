@@ -1,13 +1,11 @@
-@font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-Bold.ttf");}
-
-* {font-family: "VictorMono"; text-decoration: none;}
+* {font-family: "Courier New"; text-decoration: none;}
 
 h1 {margin-bottom: 0;}
 h2 {margin-bottom: -5px;}
 body {margin-left: 30px;}
 img {margin-left: -30px; max-width: calc(45vw - 15px); width: 900px;}
 
-p {font-size: 14px;}
+p {font-size: 16px;}
 
 /*a {color: #000000; text-decoration: none; color: #000000; background-color: #EEEEEE;}*/
 a {color: #000000; text-decoration: none;}
@@ -18,7 +16,7 @@ a {color: #000000; text-decoration: none;}
 #preview a[target="_blank"]:before {content: "{";}
 #preview a[target="_blank"]:after {content: "}";}
 
-ul {padding-left: 18px; font-size: 14px;}
+ul {padding-left: 18px; font-size: 16px;}
 
 pre {width: 50%; overflow: auto; background-color: #EFEFEF; font-size:86%; padding:0px 10px 0px 10px; margin-bottom:30px;}
 
