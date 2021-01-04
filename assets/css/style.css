@@ -1,18 +1,16 @@
-@font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-SemiBold.woff"); font-display: swap;}
-
-* {font-family: "VictorMono", "Courier New"; text-decoration: none;}
+* {font-family: "Courier New"; text-decoration: none;}
 
 h1 {margin-bottom: 0;}
 h2 {margin-bottom: -5px;}
 body {margin-left: 30px;}
 img {margin-left: -30px; max-width: calc(100vw - 15px); width:900px;}
 
-p, ul {font-size: 14px;}
+p, ul {font-size: 16px;}
 
 /*a {color: #000000; text-decoration: none; color: #000000; background-color: #EEEEEE;}*/
 a {color: #000000; text-decoration: none;}
 a:hover {background-color: #000000; color: #FFFFFF;}
-main a {background-color: #DDDDDD;}
+main a {background-color: #DDDDDD; font-weight: bold;}
 main a:before {content: "[";}
 main a:after {content: "]";}
 main a[target="_blank"]:before {content: "{";}
