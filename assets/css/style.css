@@ -1,6 +1,6 @@
-@font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-SemiBold.woff");}
+@font-face {font-family: "VictorMono"; src: url("./fonts/VictorMono-SemiBold.woff"); font-display: swap;}
 
-* {font-family: "VictorMono"; text-decoration: none;}
+* {font-family: "VictorMono", "Courier New"; text-decoration: none;}
 
 h1 {margin-bottom: 0;}
 h2 {margin-bottom: -5px;}
