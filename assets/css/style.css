@@ -3,7 +3,7 @@
 h1 {margin-bottom: 0;}
 h2 {margin-bottom: -5px;}
 body {margin-left: 30px;}
-img {margin-left: -30px; max-width: calc(100vw - 15px); width:900px;}
+img {margin-left: -30px; max-width: calc(100vw - 15px); width: 900px;}
 
 p, ul {font-size: 16px;}
 
@@ -20,4 +20,5 @@ ul {padding-left: 18px;}
 
 main {max-width: 625px; clear:both;}
 
-pre {overflow: auto; background-color: #EFEFEF; font-size:86%; padding:0px 10px 0px 10px; margin-bottom:30px;}
+pre {overflow: auto; background-color: #EFEFEF; font-size: 86%; padding: 5px 10px 5px 10px;}
+code {background-color: #EFEFEF;}
