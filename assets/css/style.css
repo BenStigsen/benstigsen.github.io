@@ -17,6 +17,7 @@ main a[target="_blank"]:before {content: "{";}
 main a[target="_blank"]:after {content: "}";}
 
 ul {padding-left: 18px;}
+li {margin-bottom: 3px;}
 
 main {max-width: 625px; clear:both;}
 
