@@ -1,25 +1,82 @@
-* {font-family: "Courier New"; text-decoration: none;}
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;600&display=swap');
 
-h1 {margin-bottom: 0;}
-h2 {margin-bottom: -5px;}
-body {margin-left: 30px;}
-img {margin-left: -30px; max-width: calc(100vw - 15px); width: 900px;}
+* {
+  font-family: 'Karla', sans-serif;
+}
 
-p, ul {font-size: 16px;}
+body {
+  background: #232333;
+  color: #dfdfdf;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/*a {color: #000000; text-decoration: none; color: #000000; background-color: #EEEEEE;}*/
-a {color: #000000; text-decoration: none; font-weight: bold;}
-a:hover {background-color: #000000; color: #FFFFFF;}
-main a {background-color: #DDDDDD; font-weight: bold;}
-main a:before {content: "[";}
-main a:after {content: "]";}
-main a[target="_blank"]:before {content: "{";}
-main a[target="_blank"]:after {content: "}";}
+a {
+  color: #aaaaff;
+  font-weight: bold;
+}
 
-ul {padding-left: 18px;}
-li {margin-bottom: 3px;}
+@media screen and (min-width: 601px) {
+  body {
+    width: 50%;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+}
 
-main {max-width: 625px; clear:both;}
+@media screen and (max-width: 600px) {
+  body {
+    width: 80%;
+  }
+  
+  p {
+    font-size: 22px;
+  }
+}
 
-pre {overflow: auto; background-color: #EFEFEF; font-size: 86%; padding: 5px 10px 5px 10px;}
-code {background-color: #EFEFEF;}
+h1 {
+  font-weight: 600;
+}
+
+table, td, th {
+  border: 1px dashed #dfdfdf;
+  width: 33%;
+}
+
+td {
+  padding-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+hr {
+  border-color: #575766;
+}
+
+#social {
+  margin-top: -20px;
+  font-size: 14px;
+}
+
+#projects-blog h2 {
+  margin-bottom: 2px;
+}
+
+.note {
+  margin-top: 5px;
+  color: #797988;
+  text-align: right;
+  font-size: 14px;
+}
+
+.list {
+  margin-top: -10px;
+  padding: 0;
+}
+

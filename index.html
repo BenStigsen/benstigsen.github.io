@@ -1,43 +1,98 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Stigsen XYZ</title>
-  <meta charset="utf-8">
-  <!--<meta name="description" content="An island of thoughts">-->
-  <meta name="keywords" content="stigsen, stigsen xyz, home, programming, coding, blog, projects">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">-->
-
-  <script async defer data-domain="stigsen.xyz" src="https://plausible.io/js/plausible.js"></script>
-</head>
-<body>
-  <h1><a href="./index.html">Stigsen XYZ</a></h1>
-  <a href="https://github.com/benstigsen" target="_blank">GitHub</a>, <a href="https://twitter.com/benstigsen" target="_blank">Twitter</a>, <a href="https://www.twitch.tv/benstigsen/about" target="_blank">Twitch</a>
-
-  <main>
-  <h2>About</h2>
-    <p>Hello, my name is Benjamin Stigsen, and welcome to my site.</p>
-    <p>This site is being used as a personal playground. As a place to create, store and document the development of my current life as well as my future life. This includes things like documenting my programming journey, setting goals for myself, planning out parts of my future and journaling of thoughts and dreams. I draw a lot of inspiration from <a href="https://100r.co/site/home.html" target="_blank">Hundred Rabbits</a> in their philosophy in regards to minimalism and efficiency, and hope to one day integrate it into my life with the same elegance as they have.
-    <p>As of writing this I'm currently a 20 year-old student from Denmark, studying for the <a href="https://en.m.wikipedia.org/wiki/Higher_Technical_Examination_Programme" target="_blank">Higher Technical Examination Programme</a>.</p>
-
-  <h2>Projects</h2>
-  <ul>
-    <!--<li><a href="./projects/name.html">Some project name</a></li>-->
-    <li><a href="./projects/brainstuck.html">Brainstuck</a></li>
-    <li><a href="./projects/solaris.html">Solaris</a></li>
-  </ul>
-
-  <h2>Blog</h2>
-  <ul>
-    <!--<li><a href="./blog/name.html">Some blog name</a></li>-->
-    <li>2021</li>
-    <ul>
-      <li><a href="./blog/2021/choosing-a-game-engine.html">Choosing a Game Engine</a> (19. February 2021)</li>
-      <li><a href="./blog/2021/using-jquery-isnt-more-minimal.html">Using jQuery Isn't More Minimal</a> (09. January 2021)</li>
-      <!--<li><a href="./blog/2021/new-years-resolution.html">New Year's Resolution</a> (27. December 2020)</li>-->
+  <head>
+    <meta charset="utf-8">
+    <title>Stigsen XYZ</title>
+    <meta name="keywords" content="stigsen, xyz, stigsenxyz, benstigsen">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <h1>STIGSEN XYZ</h1>
+    <p id="social"><a href="twitter.com/benstigsen" target="_blank">Twitter</a>, <a href="github.com/benstigsen" target="_blank">GitHub</a>, <a href="twitch.tv/benstigsen" target="_blank">Twitch</a></p>
+    
+    <p>Hello! My name is Benjamin and I'm a hobbyist programmer working on too many projects at once.</p>
+    <p>As of writing this I'm a 20 year-old student residing in Denmark, studying for the <a href="https://en.wikipedia.org/wiki/Higher_Technical_Examination_Programme" target="_blank">Higher Technical Examination</a>.</p>
+    <p>Since I have a hard time deciding whether I want to be a game, software or web developer, I've decided to try out all at once! This means that I have experience with a lot of different languages:</p>
+    
+    <table>
+      <tr>
+        <th>Master</th>
+        <th>Intermediate</th>
+        <th>Beginner</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Lol none</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Python</li>
+            <li>HTML, JavaScript, CSS</li>
+            <li>Wren</li>
+            <li>GDScript (Godot)</li>
+            <li>GML (GameMaker)</li>
+            <li>C</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>V</li>
+            <li>Rust</li>
+            <li>Ruby</li>
+            <li>Lua</li>
+            <li>PHP</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <p class="note"><i>Table of programming languages in non-prioritized order</i></p>
+    
+    <h2>Things You Should Know About Me</h2>
+    <ul class="list">
+      <li>I highly value code independence (fewer dependencies is often better)</li>
+      <li>Performance and simplicity is often my focus before usability</li>
+      <li>I'm great at creating projects that are too ambitious for me to finish</li>
+      <li>I find programming to be fun and enjoyable</li>
     </ul>
-  </ul>
-  </main>
-</body>
+    
+    <br>
+    
+    <h2>Things You Should <u>Not</u> Know About Me</h2>
+    <ul class="list">
+      <li>I like art, philosophy and psychology</li>
+      <li>Hiking is also pretty dope</li>
+      <li>Lasagna is great</li>
+      <li>I like dogs</li>
+    </ul>
+  
+    <hr>
+    
+    <br>
+    <table>
+      <tr id="projects-blog">
+        <th><h2>Projects</h2></th>
+        <th><h2>Blog</h2></th>
+      </tr>
+      <tr>
+        <!-- Projects -->
+        <td>
+          <ul>
+            <li><a href="./projects/SolarSystemSim/" target="_blank">Solaris</a> [HTML, CSS, JS]</li>
+            <ul>
+              <li>A simulation of our solar system, with focus on the Hohmann transfer orbit and Kepler's laws of planetary motion. Made with p5.js.</li>
+            </ul>
+            <li>... stuff to come</li>
+          </ul>
+        </td>
+        <!-- Blog -->
+        <td>
+          <ul>
+            <li>... stuff to come</li>
+          </ul>
+        </td>
+      </tr>
+  </body>
 </html>
