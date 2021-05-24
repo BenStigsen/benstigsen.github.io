@@ -35,7 +35,7 @@ function addItem(title, description) {
 }
 
 function editItems() {
-  window.location.href = 'https://stigsen.xyz/create.html' + window.location.search;
+  window.location.href = 'https://stigsen.xyz/projects/Schoolio/create.html' + window.location.search;
 }
 
 function getRandomRGB(min, max) {

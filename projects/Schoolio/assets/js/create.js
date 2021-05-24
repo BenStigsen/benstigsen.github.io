@@ -88,7 +88,7 @@ function shareURL() {
   let element = document.getElementById("shareurl");
   let url = generateURL();
   
-  element.innerText = window.location.protocol + "//stigsen.xyz/view.html" + url;
+  element.innerText = window.location.protocol + "//stigsen.xyz/projects/Schoolio/view.html" + url;
 }
 
 function copyURL() {
