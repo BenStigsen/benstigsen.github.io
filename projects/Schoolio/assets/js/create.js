@@ -25,6 +25,7 @@ function addItem(title, description) {
   let elementTitle       = document.createElement("h1");
   let elementTextbox     = document.createElement("div");
   let elementDescription = document.createElement("div");
+  let elementDelete      = document.createElement("button");
   
   item.classList.add("todoitem");
   elementTextbox.classList.add("description");
@@ -38,6 +39,7 @@ function addItem(title, description) {
   elementTitle.innerText       = title;
   elementTextbox.innerText     = description;
   elementDescription.innerHTML = description;
+  elementDelete.innerText      = "Remove Item";
   
   // Show rendered HTML on textbox unfocus
   elementTextbox.onblur = function () {
@@ -54,11 +56,16 @@ function addItem(title, description) {
     elementTextbox.focus();
   } 
   
+  elementDelete.onclick = function() {
+    item.remove();
+  }
+  
   // Generate random background
   item.style = "background: rgb(" + getRandomRGB(150, 225) + ")";
   item.appendChild(elementTitle);
   item.appendChild(elementTextbox);
   item.appendChild(elementDescription);
+  item.appendChild(elementDelete);
   fragment.appendChild(item);
   
   return fragment;

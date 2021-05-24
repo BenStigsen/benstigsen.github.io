@@ -64,6 +64,15 @@ a {
   margin-bottom: 5px;
 }
 
+.todoitem button {
+  margin-top: 15px;
+}
+
+.todoitem ul {
+  text-align: left;
+  width: 80%;
+}
+
 .todoitem .description {
   font-family: 'KoHo', sans-serif;
   background: #FFFFFF;
@@ -73,10 +82,5 @@ a {
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
-}
-
-.todoitem ul {
-  text-align: left;
-  width: 80%;
 }
 
