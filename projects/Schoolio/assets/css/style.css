@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&family=Lobster&display=swap');
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#todolist {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#create {
+  margin-bottom: 20px;
+}
+
+#edit {
+  margin-bottom: 20px;
+}
+
+#shareurl {
+  font-family: 'KoHo', sans-serif;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding-top: 0;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 3px;
+}
+
+.todoitem {
+  border-style: dotted;
+  border-radius: 30px;
+  background: #DD8888;
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.todoitem h1 {
+  font-family: 'Lobster', cursive;
+  background: #FFFFFF;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0;
+  border-style: solid;
+  margin-bottom: 5px;
+}
+
+.todoitem .description {
+  font-family: 'KoHo', sans-serif;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding-top: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+}
+
+.todoitem ul {
+  text-align: left;
+  width: 80%;
+}
+
