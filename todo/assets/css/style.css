@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+#tododate {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 12px;
+  margin-bottom: 2%;
+}
+
+#focus {
+  padding-top: 50px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+*::-moz-selection {background: #CCCCCC;}
+*::selection      {background: #CCCCCC;}
+
