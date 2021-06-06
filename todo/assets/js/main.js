@@ -1,11 +1,16 @@
-function todoInit() {
-  let todolist   = document.getElementById("todolist");
-  let tododate   = document.getElementById("tododate");
-  let dailyfocus = document.getElementById("focus");
-  
-  let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+let todolist;
+let tododate;
+let todoitems;
+let dailyfocus;
 
-  let todoitems = {
+let day = (new Date()).getDay();
+
+function todoInit() {
+  todolist   = document.getElementById("todolist");
+  tododate   = document.getElementById("tododate");
+  dailyfocus = document.getElementById("focus");
+  
+  todoitems = {
     monday: [
       [
         "3x45 incline pushups", 
@@ -66,12 +71,17 @@ function todoInit() {
     ]
   }
   
-  let day = days[(new Date()).getDay()];
-  tododate.innerHTML = day;
+  updateDay();
+}
+
+function updateDay() {
+  let weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"][day];
+  let items   = todoitems[weekday];
   
-  let items = todoitems[day];
+  todolist.innerHTML = "";
+  tododate.innerHTML = '<span onclick="changeDay(-1);">&lt</span> ' + weekday + ' <span onclick="changeDay(1);">&gt</span>';
+  
   let fragment = document.createDocumentFragment();
-  
   for (let i = 0; i < items[0].length; i++) {
     let p = document.createElement('p');
     p.innerText = items[0][i];
@@ -90,6 +100,15 @@ function todoInit() {
   todolist.appendChild(fragment);
   
   dailyfocus.innerHTML = "<i> <u>focus:</u> " + items[1] + "</i>";
+}
+
+function changeDay(n) {
+  day += n;
+  
+  if (day < 0) {day = 6;}
+  if (day > 6) {day = 0;}
+  
+  updateDay();
 }
 
 todoInit();
