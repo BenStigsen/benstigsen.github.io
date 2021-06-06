@@ -23,6 +23,10 @@ h1 {
   margin-bottom: 2%;
 }
 
+#tododate span, #todolist p {
+  cursor: pointer;
+}
+
 #focus {
   padding-top: 50px;
   margin-top: 15px;
