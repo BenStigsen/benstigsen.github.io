@@ -15,8 +15,9 @@ function todoInit() {
       [
         "3x40 wall pushups", 
         "3x40 knee tucks", 
-        "study", 
-        "walk"
+        "study",
+        "walk",
+        "code"
       ], 
       "productivity, mental health, physical health"
     ],
@@ -24,7 +25,8 @@ function todoInit() {
       [
         "study", 
         "work", 
-        "walk"
+        "walk",
+        "code"
       ], 
       "productivity"
     ],
@@ -33,7 +35,8 @@ function todoInit() {
         "3x50 wall pullups", 
         "2x35 half squats", 
         "study", 
-        "walk"
+        "walk",
+        "code"
       ], 
       "productivity, physical health"
     ],
@@ -41,7 +44,8 @@ function todoInit() {
       [
         "work", 
         "creative writing", 
-        "walk"
+        "walk",
+        "code"
       ], 
       "productivity, mindfulness"
     ],
@@ -57,7 +61,8 @@ function todoInit() {
       [
         "clean room", 
         "creative writing", 
-        "walk"
+        "walk",
+        "code"
       ], 
       "mental health, creativity, mindfulness"
     ],
@@ -65,7 +70,8 @@ function todoInit() {
       [
         "work", 
         "walk", 
-        "read"
+        "read",
+        "code"
       ], 
       "productivity, mindfulness"
     ]
@@ -99,7 +105,7 @@ function updateDay() {
   
   todolist.appendChild(fragment);
   
-  dailyfocus.innerHTML = "<i> <u>focus:</u> " + items[1] + "</i>";
+  dailyfocus.innerHTML = "<i><u>focus:</u> " + items[1] + "</i>";
 }
 
 function changeDay(n) {
