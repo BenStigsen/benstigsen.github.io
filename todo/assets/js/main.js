@@ -13,7 +13,7 @@ function todoInit() {
   todoitems = {
     monday: [
       [
-        "3x45 incline pushups", 
+        "3x40 wall pushups", 
         "3x40 knee tucks", 
         "study", 
         "walk"
