@@ -13,8 +13,7 @@ function todoInit() {
   todoitems = {
     monday: [
       [
-        "3x40 wall pushups", 
-        "3x40 knee tucks", 
+        "exercise", 
         "study",
         "walk",
         "code"
@@ -32,8 +31,7 @@ function todoInit() {
     ],
     wednesday: [
       [
-        "3x50 wall pullups", 
-        "2x35 half squats", 
+        "exercise", 
         "study", 
         "walk",
         "code"
@@ -43,24 +41,24 @@ function todoInit() {
     thursday: [
       [
         "work", 
-        "creative writing", 
         "walk",
-        "code"
+        "code",
+        "write"
       ], 
       "productivity, mindfulness"
     ],
     friday: [
       [
-        "3x50 short bridges", 
         "walk", 
-        "creative writing"
+        "exercise", 
+        "write"
       ], 
       "physical health, mindfulness"
     ],
     saturday: [
       [
         "clean room", 
-        "creative writing", 
+        "write", 
         "walk",
         "code"
       ], 
