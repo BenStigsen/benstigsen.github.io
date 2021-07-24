@@ -22,7 +22,7 @@ a {
     width: 60%;
   }
   
-  p {
+  p, code {
     font-size: 18px;
   }
 }
@@ -32,13 +32,19 @@ a {
     width: 90%;
   }
   
-  p {
+  p, code {
     font-size: 22px;
   }
 }
 
 h1 {
   font-weight: 600;
+}
+
+img {
+  max-height: 300px;
+  max-width: 800px;
+  //width: 100%;
 }
 
 table, td, th {
@@ -56,7 +62,24 @@ table {
 }
 
 hr {
+  margin-top: 25px;
   border-color: #575766;
+}
+
+code {
+  background: #343444;
+  padding: 0px 4px 2px 4px;
+  font-family: monospace;
+}
+
+pre code {
+  text-align: left;
+  display: inline-block;
+  overflow: auto;
+  background: #343444;
+  padding: 30px;
+  padding-right: 35px;
+  white-space: pre;
 }
 
 #social {

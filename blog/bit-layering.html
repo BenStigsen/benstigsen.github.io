@@ -1,0 +1,430 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bit Layering - Stigsen XYZ</title>
+    <meta name="keywords" content="stigsen, xyz, stigsenxyz, benstigsen, bitfield, compression, vanim, byte, vlang">
+    <meta name="description" content="Reducing memory usage bit-by-bit.">
+    <meta name="og:title" property="og:title" content="Bit Layering">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body>
+    <h1><a href="../index.html" style="text-decoration: none;">&lt</a> STIGSEN XYZ</h1>
+    <p id="social"><a href="https://twitter.com/BenStigsen" target="_blank">Twitter</a>, <a href="https://github.com/BenStigsen/" target="_blank">GitHub</a>, <a href="https://www.twitch.tv/BenStigsen" target="_blank">Twitch</a></p>
+    
+    <h2>Bit Layering</h2>
+    <p>24. July 2021</p>
+    
+    <p>
+    While working on the <a target="_blank" href="https://github.com/BenStigsen/vanim">Vanim animation engine</a>, I was trying to see how I could optimize the buffer used to store pixel data.
+    What you're seeing below is what an empty 9x9 pixel buffer would look like.
+    </p>
+    <img src="./images/bit-layering/empty-grid.png" alt="9x9 grid">
+    
+    <p>Let's draw a white triangle in this buffer, from top center (5,0) to the bottom right (9,9) and bottom left (0,9).</p>
+    <pre><code>buffer.plot_triangle((5,0), (9,9), (0,9))</code></pre>
+    <img src="./images/bit-layering/triangle-grid.png" alt="triangle 9x9 grid">
+    
+    <p>
+    Like all data in a computer, the pixels are numbers. For black and white images it makes sense to use 0 and 1.
+    But the buffer format that the Vanim animation engine uses is actually grey scale, 
+    meaning that the color can be black, white or something in between. Usually the brightest color value possible is
+    255. This is because a byte is often used to describe the color value. Since a byte consists of 8 bits, the max possible value
+    that can be stored in a byte is (2^8 - 1) or 255. 
+    </p>
+    
+    <img src="./images/bit-layering/byte-colors.png" alt="grey scale colors">
+    
+    <p>
+    So if the background is black (0) and the triangle is white (255), the buffer would be:
+    </p>
+    
+    <img src="./images/bit-layering/triangle-byte-grid.png" alt="triangle described with bytes on grid">
+    
+    <p>Now let's draw a horizontal line in the center, from left to right.</p>
+    <pre><code>buffer.plot_line((0,5), (9,5))</code></pre>
+   
+    <img src="./images/bit-layering/triangle-line-grid.png" alt="triangle and line on grid">
+    
+    <p>
+    Great, we now have a triangle and a line! But, what if we wanted to rotate the triangle, and not the line?
+    Perhaps we could redraw the buffer each time a shape is changed?
+    While this solution wouldn't be bad for small buffers, what if we have a buffer that's 1000x1000 instead of 9x9? Then we'd have
+    to redraw a lot of points!
+    </p>
+    
+    <p>
+    Maybe we should draw each shape to their own buffer?
+    </p>
+    
+    <img src="./images/bit-layering/triangle-line-canvas.png" alt="triangle and line">
+    
+    <p>Now each shape can be modified separately, and when we want to draw to the screen, we just draw all the buffers.</p>
+    <p>
+    This can very quickly become a problem though. Each shape is drawn on a 9x9 buffer. So this means that each buffer is 
+    81 bytes in size. Let's say we draw 20 shapes. Now we have twenty 9x9 buffers which amounts to 1620 bytes.
+    While 1620 bytes isn't a lot in and of it self, it quickly becomes a problem with bigger buffers. Let's say we draw 20 shapes again, 
+    but this time, each shape has its own 100x100 buffer. Now we're suddenly spending 10k bytes per shape or 200k bytes total.
+    </p>
+    
+    <p>To solve this we can use bitfield compression or my own term: "bit layering".</p>
+    <p><b>"bit layering"</b>: storing unique identifiers in bits.</p>
+    
+    <p>For each bit in a datatype, it's possible to have a unique ID.</p>
+    
+    <pre><code>log2(v+1) = n</code></pre>
+    <p>or</p>
+    <pre><code>sqrt(v+1) / 2 = n</code></pre>
+    
+    <p>
+    This means that for something with a max value of <code>v</code> it's possible to have <code>n</code> unique IDs.
+    (Here we expect <code>n</code> to be a byte-aligned datatype).
+    </p>
+    
+    <p>Since a byte has a max value of 255:</p>
+    
+    <pre><code>log2(256) = 8</code></pre>
+    
+    <p>
+    This means that it's possible for us to store 8 unique IDs in the byte. 
+    Each ID will have to be equal to a single bit (I'll explain why in a bit).
+    </p>
+    <p>Here's the list of unique IDs possible with a byte:</p>
+    
+    <pre><code>0000 0001 = 1
+0000 0010 = 2
+0000 0100 = 4
+0000 1000 = 8
+0001 0000 = 16
+0010 0000 = 32
+0100 0000 = 64
+1000 0000 = 128</code></pre>
+    
+    <p>Now that we know the possible IDs, let's start drawing!</p>
+    <p>
+    We'll start with the same shape as in the beginning.
+    Now, instead of drawing this triangle with color values, we'll draw it with an ID.
+    Let's say that the triangle will have the first possible ID, 1.
+    </p>
+    
+    <img src="./images/bit-layering/triangle-id-grid.png">
+    
+    <p>Nothing noticable has happened from our first example.</p>
+    <p>But let's now draw the same line as we did in the beginning, this line will have ID 2.</p>
+    
+    <img src="./images/bit-layering/triangle-line-wrongid-grid.png">
+    
+    <p>
+    In the buffer it can be seen that the line ID has overwritten the triangle ID at position (2,5) and (6,5).
+    This means that if we separated the polygons by their ID, we would get a triangle with broken midpoints, which is not what we want. 
+    </p>
+    
+    <p>Let's try adding the line ID instead of overriding the value that was already there.</p>
+    
+    <img src="./images/bit-layering/triangle-line-id-grid.png">
+    
+    <p>
+    We can now see that where triangle 1 and line 2 overlap, it has set the point to 3.
+    In the list of possible IDs (1,2,4,8,...), it's not possible to have an ID of 3.
+    This means that we're now able to get the original IDs that overlap at that point.
+    </p>
+    
+    <p>
+    So to get the IDs at that value, we first calculate the sum of possible IDs that could give 3.
+    In this case it only happens to be ID 1 + 2 that can give a value of 3. This must therefore
+    mean that shape 1 and 2 overlap at that point. This is better visualized with bits: 
+    </p>
+    
+    <pre><code>ID: 0000 0001
+ID: 0000 0010 +
+SUM 0000 0011 = 3</pre></code>
+    
+    <p>
+    Let's take another example. Let's draw the same triangle (ID 1) and line (ID 2), 
+    but we also draw a square at the edges (ID 4) and then a vertical line in the center (ID 8).
+    </p>
+    
+    <img src="./images/bit-layering/triangle-line-square-grids.png">
+    
+    <p>
+    This would be the combined shape:
+    </p>
+    
+    <img src="./images/bit-layering/merged-grid.png" alt="bit layering triangle line square">
+    
+    <br>
+    
+    <p>Here's me testing it with a function called <code>get_amount_of_ids()</code> that I wrote in the V programming language.</p>
+    
+    <pre style="white-space: pre;"><code style="white-space: pre;"><b>fn</b> main() {
+  <b>mut</b> buffer := Buffer{
+    width: 9
+    height: 9
+  }
+  
+  buffer.data = [
+    byte(4),4, 4, 4, 13, 4, 4, 4, 4,
+         4, 0, 0, 1, 08, 1, 0, 0, 4,
+         4, 0, 0, 1, 08, 1, 0, 0, 4,
+         4, 0, 1, 0, 08, 0, 1, 0, 4,
+         6, 2, 3, 2, 10, 2, 3, 2, 6,
+         4, 1, 0, 0, 08, 0, 0, 1, 4,
+         4, 1, 0, 0, 08, 0, 0, 1, 4,
+         5, 0, 0, 0, 08, 0, 0, 0, 5,
+         5, 5, 5, 5, 13, 5, 5, 5, 5
+  ]
+  
+  <b>mut</b> possible := []byte{}
+  
+  <b>for</b> i := 1; i < 256; i *= 2 {
+    possible << <b>byte</b>(i)
+  }
+  
+  buffer.<b>get_amount_of_ids</b>(possible)
+}</pre></code>
+
+    <p>This prints <code>4</code> which is the amount of unique IDs we're using to draw 4 shapes.</p>
+    <p>But how does it get the IDs? This is how:</p> 
+    
+    <pre><code>fn get_ids(arr []byte, target int) []int {
+  mut ids := []int
+  
+  for i := 0; i < arr.len; i++ {
+   if (target & (1 << i)) != 0 { {
+      ids << arr[i]
+    }
+  }
+
+  return ids
+}</pre></code>
+
+    <p>
+    First we define the function <code>get_ids()</code> which takes an array of bytes <code>arr</code> (containing the possible unique IDs) 
+    and a target value (which is an integer / natural number).
+    Then we also set this function to return <code>[]int</code> which is an array of integers, that is going to contain the overlapping IDs.
+    </p>
+    
+    <p>
+    An array of integers is then created, this array will contain the IDs we have found to overlap at that point. <code>mut ids := []int</code>
+    </p>
+    
+    <p>Now we get to the magical part.</p>
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (target & (1 << i)) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>
+    First we go through the numbers 0 to <code>amount_of_ids - 1</code> (0 to 7)
+    <code>for i := 0; i < arr.len; i++ {</code>
+    </p>
+    
+    <p>Then we check if this: <code>(target & (1 << i))</code> equals <code>1</code>. </p>
+    
+    <p>
+    This is where we talk about bitwise operators. Let's start with the first one: <code>&</code>, the binary "AND" operator.
+    </p>
+    
+    <pre><code>0100 0110 (70)
+       |
+0001 0011 (19)
+       v
+0000 0010 (2)</code></pre>
+    
+    <p>
+    Here we can see that something like <code>70 & 19 = 2</code>, but why is this?
+    This is because <code>&</code> only uses a bit if it's <code>1</code> in both cases. 
+    Here's a another example:
+    </p>
+    
+    <pre><code>1111 (15)
+ | |
+0101 (5)
+ v v
+0101 (5)
+    </pre></code>
+    
+    <p>
+    Here <code>15</code> and <code>5</code> only have the first and third bit in common, therefore the output is <code>5</code>.
+    </p>
+    
+    <p>We also have the <code>&lt&lt</code> operator. This is the binary left shift operator.</p>
+    <pre><code>33: 0010 0001
+&lt&lt
+66: 0100 0010
+</pre></code>
+    <p>
+    So it shifts all of the bits left by the amount you specified. This however can be shown with simple math.
+    Let's say we have this:
+    </p>
+    <pre><code>a &lt&lt b</code></pre>
+    
+    <p>That would be the same as:</p>
+    <pre><code>a * (2^b)</code></pre>
+    
+    <p><code>17 << 3 = 17 * (2^3) = 136</code></p>
+    
+    <p>
+    It's also possible to bit shift to the right <code>&gt&gt</code>.
+    This would be division instead of multiplication:
+    </p>
+    
+    <pre><code>a / (2^b)</code></pre>
+    
+    <p>Let's use this to simplify our code.</p>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (target & (1 << i)) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>Becomes:</p>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (target & (1 * math.pow(2, i))) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>It doesn't make sense to multiply by <code>1</code>:</p>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (target & math.pow(2, i)) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+    
+    <p>
+    Now let's visualize <code>(target & math.pow(2, i))</code>. 
+    What IDs make up the top center point <code>13</code> in our merged buffers?
+    </p>
+    
+    <img src="./images/bit-layering/merged-grid.png">
+    
+    <p>
+    Since <code>13</code> is quite a small number, you might have already figured it out to be <code>1 + 4 + 8</code>.
+    But let's try to code it:
+    </p>
+    
+    <pre><code>get_ids([1,2,4,8,16,32,64,128], 13)</pre></code>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (13 & math.pow(2, i)) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>
+    <code>i</code> starts by being <code>0</code> 
+    (corresponding to ID <code>1</code> in <code>arr</code>), so let's replace <code>math.pow(2, i)</code> with <code>math.pow(2, 0)</code>:
+    </p>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (13 & math.pow(2, 0)) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>The zero exponent rule states that anything to the power of 0 is 1, so <code>math.pow(2, 0)</code> becomes <code>1</code>:</p>
+    
+    <pre><code>for i := 0; i < arr.len; i++ {
+  if (13 & 1) != 0 {
+    ids << arr[i]
+  }
+}</pre></code>
+
+    <p>First we have the "AND" operation <code>13 & 1</code>:</p>
+    <pre><code>0000 1101 (13)
+&       |
+0000 0001 (1) math.pow(2, 0) i=0
+=       v
+0000 0001 (1)</pre></code>
+
+    <p>
+    Since <code>13</code> and <code>1</code> both have the first bit in common, this 
+    means that the result is <code>1</code>, and now we check if it is NOT <code>0</code>:
+    </p>
+    
+    <pre><code>if 1 != 0 {
+    ids << arr[0]
+}</pre></code>
+
+    <p>Since the result isn't <code>0</code>, that means we have found one of the overlapping IDs.</p>
+    
+    <p>
+    Now we have the first ID which is <code>1</code>. 
+    Now let's keep increasing <code>i</code>:
+    </p>
+    
+    <pre><code>0000 1101 (13)
+&       
+0000 0010 (2) math.pow(2, 1) i=1
+=       
+0000 0000 (0)</pre></code>
+
+    <p>Here we can see that <code>13</code> and <code>2</code> have no bits in common.</p>
+    <p>Let's move to the next one:</p>
+    
+    <pre><code>0000 1101 (13)
+&     |
+0000 0100 (4) math.pow(2, 2) i=2
+=     v
+0000 0100 (4)</pre></code>
+    <p>
+    Here we can see that when <code>i</code> is <code>2</code>, then <code>math.pow(2, i)</code> is equal to <code>4</code>
+    which has a bit in common with <code>13</code>, meaning that the next overlapping ID is <code>4</code>.
+    </p>
+    
+    <p>Now we keep doing this until <code>i</code> goes through all possible IDs.</p>
+    
+    <pre><code>0000 1101 (13)
+&    |
+0000 1000 (8) math.pow(2, 3) i=3
+=    v
+0000 1000 (8)</pre></code>
+
+    <p>
+    <i>The next IDs that will be checked are 16, 32, 64, 128 which are all more than our target value of 13,
+    therefore it does not make sense to test the rest of these values.</i>
+    </p>
+
+    <p>
+    Now he have collected all three IDs that equal our <code>target</code> value, <code>[1, 4, 8]</code>.
+    We can verify this by getting the sum of <code>1+4+8</code> which is <code>13</code>, the number
+    we wanted to get the IDs from.
+    </p>
+
+    <img src="./images/bit-layering/merged-13-grid.png">
+
+    <p>Each of the IDs are appended to the <code>ids</code> array.</p>
+    <pre><code>ids << arr[i]</code></pre>
+    
+    <p><i>
+    This is not bitshifting to the left, this is pushing to an array, why the V programming language developers
+    decided on this, I do not understand. I'd much rather have <code>ids.push(arr[i])</code> or <code>ids.append(arr[i])</code>
+    to avoid confusion.
+    </i></p>
+
+    <hr>
+
+    <p>
+    Since it's possible to have 8 IDs, this means that it's now possible to merge 8 buffers into one,
+    meaning that it's possible to reduce memory usage by 87.5%!
+    </p>
+    
+    <p>Now, what if you were using 32 bit integers instead of 8 bit bytes?</p>
+
+    <hr>
+    <p>Benjamin F. Stigsen</p>
+    <p id="social"><a href="https://twitter.com/BenStigsen" target="_blank">Twitter</a>, <a href="https://github.com/BenStigsen/" target="_blank">GitHub</a>, <a href="https://www.twitch.tv/BenStigsen" target="_blank">Twitch</a></p>
+    <p><a target="_blank" href="http://twitter.com/share?text=Just read @BenStigsen's blog post: Bit Layering - Reducing Memory Usage 87.5%25&url=https://stigsen.xyz/blog/bit-layering.html">Share on Twitter</a></p>
+    <br>
+    
+    <!-- Plausible Analytics Script -->
+    <script async defer data-domain="stigsen.xyz" src="https://plausible.io/js/plausible.js"></script>
+  </body>
+</html>
