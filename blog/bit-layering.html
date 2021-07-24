@@ -416,7 +416,15 @@ SUM 0000 0011 = 3</pre></code>
     <hr>
 
     <p>
-    Since it's possible to have 8 IDs, this means that it's now possible to merge 8 buffers into one,
+    Now we have succesfully gotten the IDs that make up the top point in our polygon. 
+    If we were to create an array for each ID, we could then go through each point in the buffer
+    and get the IDs for that point, then add that point to the matching ID. This way we would separate 
+    each polygon into it's own array, and now we have the points for each shape, that we can independently modify
+    or draw.
+    </p>
+
+    <p>
+    Since it's possible to have 8 IDs, this means that it's possible to merge 8 buffers into one,
     meaning that it's possible to reduce memory usage by 87.5%!
     </p>
     
