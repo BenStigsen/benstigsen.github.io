@@ -36,18 +36,18 @@
     that can be stored in a byte is (2^8 - 1) or 255. 
     </p>
     
-    <img src="./images/bit-layering/byte-colors.png" alt="grey scale colors">
+    <img src="./images/bit-layering/byte-colors.png" loading="lazy" alt="grey scale colors">
     
     <p>
     So if the background is black (0) and the triangle is white (255), the buffer would be:
     </p>
     
-    <img src="./images/bit-layering/triangle-byte-grid.png" alt="triangle described with bytes on grid">
+    <img src="./images/bit-layering/triangle-byte-grid.png" loading="lazy" alt="triangle described with bytes on grid">
     
     <p>Now let's draw a horizontal line in the center, from left to right.</p>
     <pre><code>buffer.plot_line((0,5), (9,5))</code></pre>
    
-    <img src="./images/bit-layering/triangle-line-grid.png" alt="triangle and line on grid">
+    <img src="./images/bit-layering/triangle-line-grid.png" loading="lazy" alt="triangle and line on grid">
     
     <p>
     Great, we now have a triangle and a line! But, what if we wanted to rotate the triangle, and not the line?
@@ -60,7 +60,7 @@
     Maybe we should draw each shape to their own buffer?
     </p>
     
-    <img src="./images/bit-layering/triangle-line-canvas.png" alt="triangle and line">
+    <img src="./images/bit-layering/triangle-line-canvas.png" loading="lazy" alt="triangle and line">
     
     <p>Now each shape can be modified separately, and when we want to draw to the screen, we just draw all the buffers.</p>
     <p>
@@ -110,12 +110,12 @@
     Let's say that the triangle will have the first possible ID, 1.
     </p>
     
-    <img src="./images/bit-layering/triangle-id-grid.png">
+    <img src="./images/bit-layering/triangle-id-grid.png" loading="lazy">
     
     <p>Nothing noticable has happened from our first example.</p>
     <p>But let's now draw the same line as we did in the beginning, this line will have ID 2.</p>
     
-    <img src="./images/bit-layering/triangle-line-wrongid-grid.png">
+    <img src="./images/bit-layering/triangle-line-wrongid-grid.png" loading="lazy">
     
     <p>
     In the buffer it can be seen that the line ID has overwritten the triangle ID at position (2,5) and (6,5).
@@ -124,7 +124,7 @@
     
     <p>Let's try adding the line ID instead of overriding the value that was already there.</p>
     
-    <img src="./images/bit-layering/triangle-line-id-grid.png">
+    <img src="./images/bit-layering/triangle-line-id-grid.png" loading="lazy">
     
     <p>
     We can now see that where triangle 1 and line 2 overlap, it has set the point to 3.
@@ -147,13 +147,13 @@ SUM 0000 0011 = 3</pre></code>
     but we also draw a square at the edges (ID 4) and then a vertical line in the center (ID 8).
     </p>
     
-    <img src="./images/bit-layering/triangle-line-square-grids.png">
+    <img src="./images/bit-layering/triangle-line-square-grids.png" loading="lazy">
     
     <p>
     This would be the combined shape:
     </p>
     
-    <img src="./images/bit-layering/merged-grid.png" alt="bit layering triangle line square">
+    <img src="./images/bit-layering/merged-grid.png" loading="lazy" alt="bit layering triangle line square">
     
     <br>
     
@@ -307,7 +307,7 @@ SUM 0000 0011 = 3</pre></code>
     What IDs make up the top center point <code>13</code> in our merged buffers?
     </p>
     
-    <img src="./images/bit-layering/merged-grid.png">
+    <img src="./images/bit-layering/merged-grid.png" loading="lazy">
     
     <p>
     Since <code>13</code> is quite a small number, you might have already figured it out to be <code>1 + 4 + 8</code>.
@@ -402,7 +402,7 @@ SUM 0000 0011 = 3</pre></code>
     we wanted to get the IDs from.
     </p>
 
-    <img src="./images/bit-layering/merged-13-grid.png">
+    <img src="./images/bit-layering/merged-13-grid.png" loading="lazy">
 
     <p>Each of the IDs are appended to the <code>ids</code> array.</p>
     <pre><code>ids << arr[i]</code></pre>
