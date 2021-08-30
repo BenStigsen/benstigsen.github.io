@@ -14,7 +14,7 @@ function todoInit() {
     monday: [
       [
         "exercise", 
-        "study",
+        "work",
         "walk",
         "code"
       ], 
@@ -22,7 +22,6 @@ function todoInit() {
     ],
     tuesday: [
       [
-        "study", 
         "work", 
         "walk",
         "code"
@@ -32,7 +31,6 @@ function todoInit() {
     wednesday: [
       [
         "exercise", 
-        "study", 
         "walk",
         "code"
       ], 
