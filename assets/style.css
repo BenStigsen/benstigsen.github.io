@@ -1,0 +1,127 @@
+:root {
+    --fg-main: #111111;
+    --bg-main: #eeeeee;
+
+    --fg-second: black;
+    --bg-second: white;
+
+    --underline: var(--fg-main);
+    --highlight: #ffff77;
+    --mark: #00FFFFAA;
+}
+
+body {
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: normal;
+    width: min(100ch, 90%);
+    margin: 0 auto;
+    padding: 1em;
+    color: var(--fg-main);
+    background-color: var(--bg-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.15em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.8em; }
+
+p { margin: 0.5em 0; text-align: justify; }
+
+a {
+    color: var(--fg-second);
+    text-decoration: underline;
+    text-decoration-color: var(--underline);
+    text-decoration-thickness: 2px;
+}
+
+table, th, td {
+    border: 1px solid var(--fg-second);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.25em 0.5em;
+}
+
+/* hide empty table header */
+thead th:empty {
+    display: none;
+}
+
+code table {
+    border: 1px solid var(--fg-second);
+}
+
+code tr:nth-child(even) {
+    background-color: var(--bg-second);
+}
+
+code th, code td {
+    border: none;
+    padding: 0;
+}
+
+code > table td:nth-child(1) {
+    user-select: none;
+    color: grey;
+    padding: 0.1em 0.5em;
+}
+
+mark {
+    background-color: var(--mark);
+}
+
+tr:has(mark) {
+    background-color: var(--mark) !important;
+}
+
+tr mark {
+    background-color: transparent;
+}
+
+hr {
+    color: var(--fg-main); /* IE7+ */
+    border-color: var(--fg-main); /* Chrome + Safari */
+    background-color: var(--fg-main); /* Firefox + Opera */
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 2px solid var(--underline);
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+}
+
+::selection, ::-moz-selection {
+    background: var(--highlight);
+    color: black;
+}
+
+/* dark color scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-main: #eeeeee;
+        --bg-main: #111111;
+
+        --fg-second: white;
+        --bg-second: black;
+
+        --underline: var(--highlight);
+        --highlight: #FFFF77;
+        --mark: #00FFFFAA;
+    }
+}
+
+/* code styling */
+.z-keyword, .z-string {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.z-operator, .z-numeric {
+    font-weight: bold;
+}

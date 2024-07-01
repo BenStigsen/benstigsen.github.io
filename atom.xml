@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link href="https://stigsen.dev/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://stigsen.dev"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-29T00:00:00+00:00</updated>
+    <id>https://stigsen.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>How to Effectively Trap Your Customers</title>
+        <published>2024-06-29T00:00:00+00:00</published>
+        <updated>2024-06-29T00:00:00+00:00</updated>
+        <author>
+          <name>Benjamin Stigsen</name>
+        </author>
+        <link rel="alternate" href="https://stigsen.dev/blog/how-to-effectively-trap-your-customers/" type="text/html"/>
+        <id>https://stigsen.dev/blog/how-to-effectively-trap-your-customers/</id>
+        
+        <content type="html">&lt;p&gt;You own an insurance company well-known and widely used in Denmark. Your insurance company is also the parent company of a smaller insurance company.&lt;&#x2F;p&gt;
+&lt;p&gt;The smaller company is known for being affordable (especially for students), having a user-friendly app, being transparent about pricing, and clearly showing what injuries and damages are covered. Customers can cancel their insurance at any time directly from the app. The customer support is friendly and responds quickly. Customers love and respect the transparency as well as the ease of use.&lt;&#x2F;p&gt;
+&lt;p&gt;It doesn&#x27;t seem practical to have two separate insurance companies, so your parent company decides to take ownership of the smaller company and merge them together.&lt;&#x2F;p&gt;
+&lt;p&gt;Your parent company has higher pricing, so all customers of the smaller company will be moved to this higher price, which means some customers will pay more than twice what they did before. As the systems need to be merged, the new coverage plans will start for transferred customers on July 1st. This merger incurs some costs and technically involves registering with a new insurance company, so customers will be charged a bit more in the first month, like a registration fee.&lt;&#x2F;p&gt;
+&lt;p&gt;Not all customers were aware of the price increase or the registration fee. Some customers want to cancel their insurance plan. While this can be done from the website, it isn&#x27;t possible to cancel before July 1st because the insurance hasn&#x27;t technically started yet, so the first month&#x27;s payment is required.&lt;&#x2F;p&gt;
+&lt;p&gt;Customers are unhappy, but since they can cancel after the first payment, it&#x27;s not the worst situation. However, this isn&#x27;t very profitable for your company, so you&#x27;ll require a cancellation fee, which will be quite high for newer customers who haven&#x27;t had the insurance for at least a year.&lt;&#x2F;p&gt;
+&lt;p&gt;This fee may seem high, especially to students and people on welfare, but to mitigate this, you notified customers about the increased price. Some of them received this message more than a month before the increase, while others received it only a couple of days before. Some customers may still want to avoid the increased price, registration fee, and cancellation fee; they can do so by calling customer support.&lt;&#x2F;p&gt;
+&lt;p&gt;Due to the dissatisfaction, the queue for customer support might be very long, with over 100 or 200 customers. The wait time can be impractical for students or working people, who will likely call in the afternoon. Some customers may wait around two hours, dropping from 180th to 65th in the queue. Due to common cellphone carrier behavior, some customers are disconnected automatically after two hours. When the customers call back, their spot in the queue isn&#x27;t saved, so they end up at the back of the line again, unable to reach customer support before it closes.&lt;&#x2F;p&gt;
+&lt;p&gt;Luckily, it is possible to contact customer support on Saturdays. Some customers will try to do this, but for reasons unknown, they&#x27;ll remain the first person in the queue for more than 30 minutes, wondering if there&#x27;s a problem with the system. Not to worry, though, you&#x27;ve planned for inconveniences like this and made the system tell the customers to press 1 if they want to be called back, so they don&#x27;t have to wait. It just so happens that some customers wait for several hours without being called at all. This is worrying to some of them, as this is the last day they have to cancel before the insurance becomes active on Monday. So they call again. The system lets them know that their phone number is already registered and that they&#x27;ll be called back soon, so the customer decides to hang up and wait some more. Now it&#x27;s getting late, and time is running out, so the customer decides to call again, becoming number 14 in the queue. After about 70 minutes of waiting, they get through to a kind service worker, where they request to have their insurance plan cancelled. The worker, having taken many calls from the transferring customers, cancels immediately without any cancellation fee. This conversation takes less than a minute.&lt;&#x2F;p&gt;
+&lt;p&gt;All of the negative press made you nervous, but you did some calculations and realized that you needed less than half of all the new customers due to the registration fee, increase in monthly pricing, and the cancellation fee. You weren&#x27;t so worried after all, knowing that your parent company, Tryg, would still make a profit.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Optimizing My Finances as a Student</title>
+        <published>2024-06-22T00:00:00+00:00</published>
+        <updated>2024-06-22T00:00:00+00:00</updated>
+        <author>
+          <name>Benjamin Stigsen</name>
+        </author>
+        <link rel="alternate" href="https://stigsen.dev/blog/optimizing-my-finances-as-a-student/" type="text/html"/>
+        <id>https://stigsen.dev/blog/optimizing-my-finances-as-a-student/</id>
+        
+        <content type="html">&lt;p&gt;This is what my monthly finances looked like a couple of months ago:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Amount (DKK)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;+5.800&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;income&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-3.035&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;rent&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-250&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;insurance (health + apartment)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-200&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;business account (lunar)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-170&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;internet&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-110&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;gym&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-58&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mobile insurance&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-42&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;webserver&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-40&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;domains (4 domains) (namecheap)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-19&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mobile data plan&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-14&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;geoguessr&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-8&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mail (posteo)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;&lt;strong&gt;Total Expenses:&lt;&#x2F;strong&gt; 3.946 DKK&#x2F;month (47.352 DKK&#x2F;yr)&lt;br &#x2F;&gt;
+&lt;strong&gt;Total Available:&lt;&#x2F;strong&gt; 1.854 DKK&#x2F;month (22.248 DKK&#x2F;yr)&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;After expenses, I would have around 1.850 DKK every month for groceries and everything else. One thing the list above doesn&#x27;t include, however, is non-fixed expenses like cigarettes. A pack was bought every 2-3 days (we&#x27;ll say every 2.5 days), which ends up being around 720 DKK&#x2F;month &lt;strong&gt;(~40% of the remaining money!)&lt;&#x2F;strong&gt;. And that&#x27;s not including social events where I&#x27;d buy even more. The amount I have left is much lower than before:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Total Available:&lt;&#x2F;strong&gt; 1.134 DKK&#x2F;month (13.608 DKK&#x2F;year)&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;A lot of the expenses would also go to fast food. Let&#x27;s say pizza five times a month (sometimes even more often &lt;em&gt;*sigh*&lt;&#x2F;em&gt;). With delivery (as it pretty much always is), that&#x27;s 635 DKK.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Total Available:&lt;&#x2F;strong&gt; 499 DKK&#x2F;month (5.988 DKK&#x2F;year)&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;So now you may be wondering, how is that enough to buy groceries? &lt;em&gt;It isn&#x27;t&lt;&#x2F;em&gt;. I had some freelance work on the side, earning me quite a good sum of money, but let me put it this way... I don&#x27;t have anything saved up... like, at all. My spending habits are terrible, but that freelance work (which I barely do anymore) was &lt;em&gt;almost&lt;&#x2F;em&gt; enough to keep me going 90% of the time. But for those 10%, usually at the end of the month, I&#x27;d borrow a bit from my parents.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;This is a real &lt;em&gt;&lt;strong&gt;problem&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;. Unable to save up for when I have to move out of student housing, and driven by my craving for simplicity, I decided to do something about it.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;Here is what my expenses look like now:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Amount (DKK)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;+5.800&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;income&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-3.035&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;rent&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-250&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;insurance (health + apartment)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-170&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;internet&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-42&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;webserver&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-19&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mobile data plan&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-7&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;domain (porkbun)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-6&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mail (migadu + student discount)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;&lt;strong&gt;Total Expenses:&lt;&#x2F;strong&gt; 3.529 DKK&#x2F;month (42.348 DKK&#x2F;year) &lt;strong&gt;(10% decrease)&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Total Available:&lt;&#x2F;strong&gt; 2.271 DKK&#x2F;month (27.252 DKK&#x2F;year) &lt;strong&gt;(22% increase)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;I removed expenses like mobile insurance, closed my business account that I don&#x27;t use anymore, and turned off renewal for domain names except for the one currently in use. Since I don&#x27;t go to the gym anymore, it seems unhelpful to keep the subscription active.&lt;&#x2F;p&gt;
+&lt;p&gt;I also moved my mail account from Posteo to Migadu and the website domain from Namecheap to Porkbun, both of which are cheaper than the previous.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;Right now, I&#x27;m in the middle of removing my web server, as I really only need static site hosting, which is offered for free by GitHub. This saves me around 504 DKK every year.&lt;&#x2F;p&gt;
+&lt;p&gt;But that&#x27;s not all! The cost of my internet (200 Mbit up&#x2F;down) increases from 170 DKK&#x2F;month to 350 DKK&#x2F;month. It seems they don&#x27;t have a deal with student housing anymore, and it&#x27;s hard to find something much cheaper. After hinting that I may leave because of their new price, they offered 230 DKK, which is still more than I was willing to spend...&lt;&#x2F;p&gt;
+&lt;p&gt;So from the 10th of July, I won&#x27;t have internet anymore. Not paying for a webserver or internet affects the numbers like so:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Total Expenses:&lt;&#x2F;strong&gt; 3.317 DKK&#x2F;month (39.804 DKK&#x2F;year) &lt;strong&gt;(16% decrease)&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Total Available:&lt;&#x2F;strong&gt; 2.483 DKK&#x2F;month (29.796 DKK&#x2F;year) &lt;strong&gt;(34% increase)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;That is significant!&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;This is the list after those changes:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Amount (DKK)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;+5.800&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;income&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-3.035&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;rent&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-250&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;insurance (health + apartment)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-19&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mobile data plan&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-7&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;domain (porkbun)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;-6&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;mail (migadu + student discount)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;From 11 to 5 expenses.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;p&gt;So how much do cigarettes take up now? None! As of writing this, I&#x27;m about to reach 90 days nicotine-free.&lt;&#x2F;p&gt;
+&lt;p&gt;The biggest issue currently is my relationship with fast food, and there are a couple of things I can do here:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&#x27;t buy it&lt;&#x2F;li&gt;
+&lt;li&gt;Order it less&lt;&#x2F;li&gt;
+&lt;li&gt;Buy cheaper fast food&lt;&#x2F;li&gt;
+&lt;li&gt;Pick up in person (~30% cheaper)&lt;&#x2F;li&gt;
+&lt;li&gt;Make use of lunch offers (~25% cheaper)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;While it would be great to completely stop buying it, I think that would make things harder than necessary for now. Instead of ordering weekly or more often, I&#x27;ll make the following changes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Order it less frequently (at least 10 days between orders)&lt;&#x2F;li&gt;
+&lt;li&gt;Buy cheaper fast food&lt;&#x2F;li&gt;
+&lt;li&gt;Pick up in person&lt;&#x2F;li&gt;
+&lt;li&gt;Make use of lunch offers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This should reduce the cost from 635 DKK&#x2F;month to at least 200 DKK&#x2F;month, saving me around 5.220 DKK&#x2F;year.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
